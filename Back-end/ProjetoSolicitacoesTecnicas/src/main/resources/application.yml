@@ -1,0 +1,31 @@
+cors:
+  originPatterns: http://localhost:3000,http://localhost:8080
+security:
+  jwt:
+    token:
+      secret-key: 53cr37
+      expire-length: 3600000
+file:
+  upload-dir: E:\Projeto LedWare\Back-end\Arquivos
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/projetoSolicitaçõesTécnicas
+    username: postgres
+    password: 135ks
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate: 
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      show-slq: false
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 100MB
+      max-request-size: 100MB
+  flyway:
+    enabled: false
